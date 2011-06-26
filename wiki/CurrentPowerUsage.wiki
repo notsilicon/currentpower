@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Usage instructions for the currentpower.pl script.
+
+= Details =
+
+currentpower.pl is a Perl script that has been tested on OSX 10.6.7-8 running Perl 5.10. It _should_ also work on most Linux distributions with an up to date Perl package. Also required is the Perl module Modbus::Client which can be obtained from [http://search.cpan.org/~dvklein/Modbus-Client-1.03/lib/Modbus/Client.pm cpan], and curl.
+
+Once Perl requirements are met, open the file in your text editor of choice and edit the following values to match your configuration: 
+ * Line 18: Insert the path to your serial device node i.e. "/dev/tty.usbserial-0000205D"
+ * Line 40: Insert your PVOutput.org API key and system ID in the marked spots
+
+You will also need to make sure you have enabled API access in the settings section of your PVOutput account. At this point you should be able to run the script (perl currentpower.pl) and see if your device connects and queries the inverter correctly, and that the results are sent to pvoutput. If all goes well, you can set up a cron job to run every 5, 10, or 15 minutes (depending on the update interval set on your PVOutput account) between the hours your array will be exposed to the sun. It's a good idea to start running the script an hour or so before and after your expected sunrise and sunset just in case.
