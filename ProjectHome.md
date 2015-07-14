@@ -1,0 +1,1 @@
+CurrentPower is intended to provide a simple way to update electricity generation statistics from a Sharp JH1600e inverter and attached photovoltaic array to pvoutput.org.
